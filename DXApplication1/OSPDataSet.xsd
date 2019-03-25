@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OSPDataSet" targetNamespace="http://tempuri.org/OSPDataSet.xsd" xmlns:mstns="http://tempuri.org/OSPDataSet.xsd" xmlns="http://tempuri.org/OSPDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OSPbaglantiStringi" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OSPbaglantiStringi (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DXApplication1.Properties.Settings.GlobalReference.Default.OSPbaglantiStringi" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="makbuzTableAdapter" GeneratorDataComponentClassName="makbuzTableAdapter" Name="makbuz" UserDataComponentName="makbuzTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OSPbaglantiStringi (Settings)" DbObjectName="OSP.dbo.makbuz" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ad, soyad, [taksit sırası], [odenen miktar], [odenen tarih] FROM dbo.makbuz</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ad" DataSetColumn="ad" />
+              <Mapping SourceColumn="soyad" DataSetColumn="soyad" />
+              <Mapping SourceColumn="taksit sırası" DataSetColumn="taksit sırası" />
+              <Mapping SourceColumn="odenen miktar" DataSetColumn="odenen miktar" />
+              <Mapping SourceColumn="odenen tarih" DataSetColumn="odenen tarih" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OSPDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OSPDataSet" msprop:Generator_UserDSName="OSPDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="makbuz" msprop:Generator_TableClassName="makbuzDataTable" msprop:Generator_TableVarName="tablemakbuz" msprop:Generator_TablePropName="makbuz" msprop:Generator_RowDeletingName="makbuzRowDeleting" msprop:Generator_RowChangingName="makbuzRowChanging" msprop:Generator_RowEvHandlerName="makbuzRowChangeEventHandler" msprop:Generator_RowDeletedName="makbuzRowDeleted" msprop:Generator_UserTableName="makbuz" msprop:Generator_RowChangedName="makbuzRowChanged" msprop:Generator_RowEvArgName="makbuzRowChangeEvent" msprop:Generator_RowClassName="makbuzRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ad" msprop:Generator_ColumnVarNameInTable="columnad" msprop:Generator_ColumnPropNameInRow="ad" msprop:Generator_ColumnPropNameInTable="adColumn" msprop:Generator_UserColumnName="ad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="soyad" msprop:Generator_ColumnVarNameInTable="columnsoyad" msprop:Generator_ColumnPropNameInRow="soyad" msprop:Generator_ColumnPropNameInTable="soyadColumn" msprop:Generator_UserColumnName="soyad">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="taksit_x0020_sırası" msprop:Generator_ColumnVarNameInTable="columntaksit_sırası" msprop:Generator_ColumnPropNameInRow="taksit_sırası" msprop:Generator_ColumnPropNameInTable="taksit_sırasıColumn" msprop:Generator_UserColumnName="taksit sırası" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="odenen_x0020_miktar" msprop:Generator_ColumnVarNameInTable="columnodenen_miktar" msprop:Generator_ColumnPropNameInRow="odenen_miktar" msprop:Generator_ColumnPropNameInTable="odenen_miktarColumn" msprop:Generator_UserColumnName="odenen miktar" type="xs:decimal" minOccurs="0" />
+              <xs:element name="odenen_x0020_tarih" msprop:Generator_ColumnVarNameInTable="columnodenen_tarih" msprop:Generator_ColumnPropNameInRow="odenen_tarih" msprop:Generator_ColumnPropNameInTable="odenen_tarihColumn" msprop:Generator_UserColumnName="odenen tarih" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
